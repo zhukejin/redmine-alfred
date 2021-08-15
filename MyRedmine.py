@@ -33,7 +33,9 @@ def format_emit(arr):
         "items": [
             {
                 'title': f'当月加班 {count_overtime} 小时',
-                'subtitle': '回车导出为 excel'
+                'subtitle': '回车导出为 excel',
+                'arg': '0',  # 必须的参数，只有有这个参数，才可以链接下一个 workflow 动作
+                'valid': True
             }
         ]
     })
@@ -171,7 +173,8 @@ class RedmineQuery:
             "items": [
                 {
                     'title': f'{issues["subject"]}',
-                    'subtitle': f'{issues["description"]} 回车查看详情'
+                    'subtitle': f'{issues["description"]} 回车查看详情',
+                    'arg': issue_id
                 }
             ]
         })
