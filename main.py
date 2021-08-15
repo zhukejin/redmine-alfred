@@ -2,7 +2,7 @@
 import sys
 import MyRedmine
 
-rest_key = '' # 这里是redmine 的 rest key，在后台可以看到
+rest_key = 'you key' # 从 redmine 后台可以看到
 
 #  创建实例
 my_redmine = MyRedmine.RedmineQuery(rest_key)
@@ -15,4 +15,3 @@ if query == '0':
     my_redmine.get_person_hour()
 else:
     my_redmine.get_issue_info(query)
-

@@ -1,1 +1,5 @@
-/Users/yunsu/Library/Application Support/Alfred/Alfred.alfredpreferences/workflows/user.workflow.2F11CC40-79CB-49F7-B77F-6114F0274B53/export.py
+# coding=UTF-8
+
+from MyRedmine import export
+
+export()
