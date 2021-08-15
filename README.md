@@ -23,3 +23,7 @@
 ## 用法
 
 双击 workflow 文件即可
+
+## tips
+
+- MyRedmine 类可单独使用
