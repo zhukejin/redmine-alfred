@@ -90,7 +90,10 @@ class RedmineQuery:
     # 初始化数据
     def __init__(self, key):
         # 初始化 redmine 资源
-        self.redmine = Redmine(pm_host, key=key)
+        if key == '' or key is None:
+            key = os.environ.get('key')
+            
+        self.redmine = Redmine(pm_host, key)
 
         self.current_user = dict(self.redmine.user.get('current'))
 
